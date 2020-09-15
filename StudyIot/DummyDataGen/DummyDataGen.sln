@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusTestApp", "BogusTestApp\BogusTestApp.csproj", "{05D69545-3EA3-40A5-B3D0-FC832854BD4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{7379DA5A-D3B6-4490-A036-4B740202B37A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advanced", "Advanced", "{0738168B-B1D5-4A0F-AB0B-64EC5F6AA1B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intermediate", "Intermediate", "{C52B4486-CF55-47A0-AA02-B28798EF732C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusFakeTempHumidApp", "BogusFakeTempHumidApp\BogusFakeTempHumidApp.csproj", "{D39816E9-1390-42CF-8E94-DE98C4467356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTT", "MQTT\MQTT.csproj", "{A4EB7374-3AFB-4454-B206-E1EF9871FE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Background", "Background\Background.csproj", "{3E92A702-DA75-456E-8042-210FF5947867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackGround.Core", "BackGround.Core\BackGround.Core.csproj", "{4069B462-9FFB-4CF0-841D-5039E78C018B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05D69545-3EA3-40A5-B3D0-FC832854BD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D69545-3EA3-40A5-B3D0-FC832854BD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D69545-3EA3-40A5-B3D0-FC832854BD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D69545-3EA3-40A5-B3D0-FC832854BD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39816E9-1390-42CF-8E94-DE98C4467356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39816E9-1390-42CF-8E94-DE98C4467356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39816E9-1390-42CF-8E94-DE98C4467356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39816E9-1390-42CF-8E94-DE98C4467356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EB7374-3AFB-4454-B206-E1EF9871FE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EB7374-3AFB-4454-B206-E1EF9871FE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EB7374-3AFB-4454-B206-E1EF9871FE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EB7374-3AFB-4454-B206-E1EF9871FE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E92A702-DA75-456E-8042-210FF5947867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E92A702-DA75-456E-8042-210FF5947867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E92A702-DA75-456E-8042-210FF5947867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E92A702-DA75-456E-8042-210FF5947867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4069B462-9FFB-4CF0-841D-5039E78C018B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4069B462-9FFB-4CF0-841D-5039E78C018B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4069B462-9FFB-4CF0-841D-5039E78C018B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4069B462-9FFB-4CF0-841D-5039E78C018B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{05D69545-3EA3-40A5-B3D0-FC832854BD4E} = {7379DA5A-D3B6-4490-A036-4B740202B37A}
+		{D39816E9-1390-42CF-8E94-DE98C4467356} = {7379DA5A-D3B6-4490-A036-4B740202B37A}
+		{A4EB7374-3AFB-4454-B206-E1EF9871FE87} = {C52B4486-CF55-47A0-AA02-B28798EF732C}
+		{3E92A702-DA75-456E-8042-210FF5947867} = {C52B4486-CF55-47A0-AA02-B28798EF732C}
+		{4069B462-9FFB-4CF0-841D-5039E78C018B} = {C52B4486-CF55-47A0-AA02-B28798EF732C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4DF609E-48F0-4EBD-98D7-C8175C0AE995}
+	EndGlobalSection
+EndGlobal

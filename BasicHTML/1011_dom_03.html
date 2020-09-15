@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>dom example</title>
+        <script>
+            window.onload =function(){
+                var image = document.getElementById("image");
+                image.width = 640;
+                image.height = 400;
+                image.src = "http://placehold.it/640x400";
+
+                document.body.setAttribute("data-custom", "value");
+                var dataCustom = document.body.getAttribute("data-custom");
+                alert("dataCystom");
+            }
+        
+        </script>
+    </head>
+    <body>
+        <img id = "image" />
+    </body>
+    
+</html>

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:d3="clr-namespace:InteractiveDataDisplay.WPF;assembly=InteractiveDataDisplay.WPF"
         xmlns:local="clr-namespace:Exam"
         mc:Ignorable="d"
@@ -37,32 +38,32 @@
                     <MenuItem Header="파일"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5">
                         <MenuItem Header="열기" HorizontalAlignment="Left" />
                         <MenuItem Header="저장" HorizontalAlignment="Left"/>
-                        <MenuItem Header="끝내기" HorizontalAlignment="Left"/>
+                        <MenuItem Header="끝내기" HorizontalAlignment="Left" Click="MenuSubItemExit_Click"/>
                     </MenuItem>
                     <MenuItem Header="시뮬레이션"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5">
-                        <MenuItem Header="시작" HorizontalAlignment="Left"/>
-                        <MenuItem Header="중지" HorizontalAlignment="Left"/>
+                        <MenuItem  Header="시작" HorizontalAlignment="Left" Click="MenuSubItemStart_Click"/>
+                        <MenuItem Header="중지" HorizontalAlignment="Left" Click="MenuSubItemStop_Click"/>
                     </MenuItem>
                     <MenuItem Header="도움말"  Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5">
-                        <MenuItem Header="정보" HorizontalAlignment="Left"/>
+                        <MenuItem Header="정보" HorizontalAlignment="Left" Click="MenuSubItemInfo_Click" />
                     </MenuItem>
                 </Menu>
             </Grid>
         </GroupBox>
 
-        <TextBlock Text="연결시간 : " Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="10"/>
-        <TextBlock Text="0" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Right" Margin="10,5,15,5"/>
+        <TextBlock x:Name="LblConnectionTime" Text="연결시간 : " Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="10"/>
+        <TextBlock x:Name="TxtSensorCount" Text="0" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" TextAlignment="Right" Margin="10,5,15,5"/>
         <GroupBox Header="포토레지스터" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="5">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <ProgressBar Margin="8" Grid.Row="0"/>
-                <Label Content="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <ProgressBar x:Name="PgbPhotoRegistor" Margin="8" Grid.Row="0"/>
+                <Label x:Name="LblPhotoRegistor" Content="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </GroupBox>
-        <TextBox Grid.Row="4" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Margin="5"/>
+        <TextBox x:Name="RtbLog" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Margin="5"/>
         <GroupBox Header="포트" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="5" Margin="5,10,5,5">
             <Grid>
                 <Grid.RowDefinitions>
@@ -75,10 +76,10 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <ComboBox Margin="5,15,5,0" Grid.Row="0" />
-                <Button Margin="5,10,5,25" Content="CONNECT" Grid.Row="1" Grid.RowSpan="2" />
-                <Button Margin="5,30,5,5" Content="DISSCONNECT" Grid.Row="2" Grid.RowSpan="2" />
-                <Button Margin="5,10,5,0" Content="Port" Grid.Row="4" Grid.RowSpan="3" FontSize="40" FontWeight="ExtraBlack"/>
+                <ComboBox x:Name="CboSerialPort" Margin="5,10,5,0" Grid.Row="0" />
+                <Button x:Name="BtnConnect" Margin="5,10,5,15" Content="CONNECT" Grid.Row="1" Grid.RowSpan="2" Click="BtnConnect_Click" />
+                <Button x:Name="BtnDisconnect" Margin="5,20,5,5" Content="DISSCONNECT" Grid.Row="2" Grid.RowSpan="2" Click="BtnDisconnect_Click" />
+                <Button x:Name="BtnPortValue" Margin="5,10,5,0" Content="Port" Grid.Row="4" Grid.RowSpan="3" FontSize="40" FontWeight="ExtraBlack"/>
             </Grid>
             
         </GroupBox>
@@ -87,9 +88,11 @@
         <Button Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="2" Margin="10,10,40,10" Content="ZOOM"/>
 
         <GroupBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5" Margin="15">
-            <d3:Chart BottomTitle="Time" LeftTitle="Photo value" >
-                <d3:LineGraph x:Name="linegraph" Description="Photo Registor Value" Stroke="Red" StrokeThickness="4"/>
-            </d3:Chart>
+            <lvc:CartesianChart Margin="50">
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="{Binding LineValues}" DataLabels="True"/>
+                </lvc:CartesianChart.Series>
+            </lvc:CartesianChart>
         </GroupBox>
 
     </Grid>

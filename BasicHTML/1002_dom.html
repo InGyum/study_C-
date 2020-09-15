@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>dom example</title>
+        <script>
+            window.onload =function(){
+                // document.querySelector("h1").style.backgroundColor = "red";
+                // document.querySelector("h2").style.color = "red";
+                
+                //getElementById
+                // var selector = document.getElementById("selector");
+                // selector.style.backgroundColor = "green";
+                // selector.style.color = "write";
+                // selector.innerHTML = "<i>Javascript</i> changed";
+
+                // quertSelector
+                // var header = document.querySelector("h1");
+                // header.style.backgroundColor = "red";
+                // header.style.color = "yellow";
+                // header.innerHTML = "한글로 보내요";
+
+                // quertSelectorAll
+                var headers = document.querySelectorAll("h1");
+                for (let index = 0; index < headers.length; index++) {
+                    var header = headers[index];
+                    header.style.backgroundColor = "green";
+                    header.style.color = "write";
+                    header.innerHTML = " From Javascript : " + index;
+                    
+                }
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1>Lorem ipsom dolor sit amet</h1>
+        <h2>Lorem ipsom dolor sit amet</h2>
+        <h1 id="selector">Test</h1>
+    </body>
+    
+</html>
